@@ -110,8 +110,10 @@ console.log(evens)
 // using a for loop. Log the result.
 
 let countdown = [];
-
-
+for(let i = 10; i >=1; i--) {
+    countdown.push(i);
+}
+console.log(countdown);
 //////////////////PROBLEM 12////////////////////
 
 // Using a for loop, fill the reversedArray with the elements of originalArray,
@@ -120,7 +122,10 @@ let countdown = [];
 
 const originalArray = [1, 2, 3, 4];
 const reversedArray = [];
-
+for(let i = originalArray.length-1; i >= 0; i--) {
+    reversedArray.push(originalArray[i]);
+}
+console.log(reversedArray);
 
 
 /// ///////////////PROBLEM 13////////////////////
@@ -132,10 +137,14 @@ const reversedArray = [];
 
 const groceryList = ['apple', 'banana', 'cherry', 'durian']
 const itemToRemove = 'banana';
+const itemToRemove2 = 'apricot';
 
 // Also try with itemToRemove = 'apricot' and make sure that nothing happens
 // to the grocery list
-
+groceryList.splice(1, groceryList.indexOf(itemToRemove));
+console.log(groceryList);
+groceryList.splice(1, groceryList.indexOf(itemToRemove2));
+console.log(groceryList);
 
 //////////////////PROBLEM 14////////////////////
 
@@ -150,7 +159,10 @@ const itemToRemove = 'banana';
 
 let sum = 0;
 const repeats = [1, 1, 2, 5, 2, 6, 6];
-
+for(let i = 0; i < repeats.length; i++) {
+    if(repeats[i] === repeats[i+1]) sum += repeats[i];
+}
+console.log(sum);
 //////////////////PROBLEM 15////////////////////
 
 // In the function below, inputArray is an array of numbers.
@@ -160,3 +172,7 @@ const repeats = [1, 1, 2, 5, 2, 6, 6];
 
 const inputArray = [1, -2, 3, 5, -8, -13, 21];
 const indexes = [];
+for(let i = 0; i < inputArray.length; i++) {
+    if(inputArray[i] >= 0) indexes.push(i);
+}
+console.log(indexes);
